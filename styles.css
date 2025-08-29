@@ -11,13 +11,140 @@ body {
   font-family: "Red Hat Display", sans-serif;
 }
 
+.top-image img {
+  width: 100%;
+}
+
+.container {
+  margin: 32px auto;
+  max-width: 364px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.header p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6b59d0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 352px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  border-left: 2px dashed #deddeb;
+  top: -50rem;
+  bottom: -8rem;
+  left: -20px;
+  width: 1px;
+  z-index: -1;
+}
+
+.card img {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 25px;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  color: #374151;
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+
+.card h2::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 2px;
+  left: -20px;
+  background-color: #6b59d0;
+}
+
+.card p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 150%;
+}
+
+.card span {
+  color: #6b59d0;
+}
+
 .author-info {
   font-size: 14px;
   text-align: center;
-  margin-top: 16px;
+  margin-top: 100px;
   color: rgb(55, 65, 81);
 }
 
 .author-info a {
   text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 880px;
+  }
+
+  .header {
+    max-width: 720px;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .text-container {
+    max-width: 880px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .card {
+    margin-right: 20px;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .container {
+    max-width: 1280px;
+    width: 1130px;
+    margin: 0 auto 5rem;
+  }
+
+  .header {
+    margin-bottom: 80px;
+  }
+
+  .text-container {
+    max-width: 1206px;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
 }
